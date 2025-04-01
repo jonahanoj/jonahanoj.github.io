@@ -1,0 +1,256 @@
+/* Basic Stuff */
+
+@font-face {
+  font-family: 'Minecraft';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Minecraft'), url('/fonts/minecraft.woff') format('woff');
+}
+
+.a, .a:visited {
+    border: 1px solid white;
+    color: #FFF;
+    text-decoration: none;
+
+    font-size: 1.5rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 10px;
+    border: 2px solid #fafafa;
+    background: #252525;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+}
+.a:hover {
+    background-color: #094044;
+    border-radius: 3px;
+}
+
+.a:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  
+body {
+  background: linear-gradient(90deg, #001802, #0a4b29);
+}
+
+#buttons {
+    display: none;
+}
+
+#toolbar {
+    display: flex;
+}
+
+h2 {
+    color: #FFF;
+}
+
+#content {
+    margin: auto;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.blogpost {
+   background: linear-gradient(90deg, #182d4d, #1d0642);
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 6px solid rgb(0, 8, 31);
+    border-radius: 8px;
+}
+
+.blogpost img {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+.blogpost h1 {
+    background-color: inherit;
+    font-size: 1.5em;
+}
+
+.blogpost p {
+    text-align: justify;
+    color: #fff;
+}
+
+body {
+    font-family: 'Baloo 2';font-size: 22px;
+    font-weight: 800;
+}
+
+li {
+    color: #FFF;
+}
+
+/* cool download button */
+.Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  }
+  
+  .svgIcon {
+    fill: rgb(178, 255, 238);
+  }
+  
+  .icon2 {
+    width: 18px;
+    height: 5px;
+    border-bottom: 2px solid rgb(143, 255, 227);
+    border-left: 2px solid rgb(143, 255, 236);
+    border-right: 2px solid rgb(143, 255, 221);
+  }
+  
+  .tooltip {
+    position: absolute;
+    right: -105px;
+    opacity: 0;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 12, 12);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    left: -5%;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    background-color: rgb(94, 255, 188);
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+  }
+  
+  .Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  /* W MINECRAFT BUTTON*/
+
+  .mcbutton {
+    font-family: 'Minecraft';
+    font-size: 18px;
+    background-color: #008542;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    margin-bottom: 15px;
+  }
+  
+  .mcbutton:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #008542 !important;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+      0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+      4px 0 rgb(21 108 0 / 50%) inset;
+  }
+  
+  .mcbutton:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .mcbutton:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  }
+  
+  .mcbutton:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  .mcbutton:active {
+    transform: translateY(4px);
+  }
+  
+  .mcbutton:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  
